@@ -85,14 +85,15 @@ curl -w "@curl-format.txt" https://your-domain.com
 ```
 
 ## File Structure
+
+All HTML files and assets are located in the `docs/` directory:
 ```
-company-website/
-├── .htaccess (server caching & compression config)
-├── index.html (optimized with meta tags)
-├── about.html (optimized)
-├── contact.html (optimized)
-├── dashboard.html (optimized)
-├── products.html (optimized)
+docs/
+├── index.html (homepage)
+├── about.html
+├── contact.html
+├── dashboard.html
+├── products.html
 ├── css/
 │   └── style.css (optimized with will-change)
 ├── js/
@@ -100,14 +101,15 @@ company-website/
 └── assets/
     ├── logo.jpg
     ├── hero.jpg
-    ├── product1.jpg
-    ├── product2.jpg
-    ├── product3.jpg and so on...
+    ├── product1.jpg through product12.jpg
     └── promo.mp4
 ```
+
+**Note:** The `company-website/assets/` folder exists locally but is **excluded from git tracking** (see `.gitignore`) and hidden from VS Code file explorer (see `.vscode/settings.json`). The project uses `docs/assets/` for all asset references.
 
 ## Notes
 - The site is now production-ready for high-traffic scenarios
 - Ensure your hosting provider supports .htaccess modifications
 - Monitor server load and implement auto-scaling if needed
 - Regular performance audits recommended (quarterly)
+- Asset references point to `docs/assets/` only

@@ -1,0 +1,8 @@
+{
+    "files.exclude": {
+        "company-website/assets": true
+    },
+    "search.exclude": {
+        "company-website/assets": true
+    }
+}
